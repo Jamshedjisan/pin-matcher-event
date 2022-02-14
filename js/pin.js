@@ -29,3 +29,23 @@ document.getElementById('typed-numbers').addEventListener('click',function(event
     }
 
 });
+
+
+
+function submitBtn(){
+   const generateNumber = document.getElementById('display-pin').value;
+   const inputNumber = document.getElementById('input-number').value;
+   const successMessage = document.getElementById('success-message');
+   const errorMessage = document.getElementById('error-message');
+    if(generateNumber == inputNumber){
+     
+        successMessage.style.display = 'block';
+        errorMessage.style.display = 'none';
+    }
+    else{
+      
+        errorMessage.style.display = 'block';
+        successMessage.style.display = 'none';
+    }
+
+}
