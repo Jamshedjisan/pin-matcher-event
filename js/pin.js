@@ -14,3 +14,18 @@ function generatePin(){
     document.getElementById('display-pin').value = pinResult;
 }
 
+document.getElementById('typed-numbers').addEventListener('click',function(event){
+    const number = event.target.innerText;
+    const calcInput = document.getElementById('input-number');
+    if(isNaN(number)){
+        if(number == 'C'){
+            calcInput.value = '';
+        }
+    }
+    else{
+        const previousNumber = calcInput.value;
+        const newNumber = previousNumber + number;
+        calcInput.value = newNumber;
+    }
+
+});
